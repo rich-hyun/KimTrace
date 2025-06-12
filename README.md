@@ -26,7 +26,7 @@
    ↓
 [ Web3.py → 스마트컨트랙트 ]
    ↓
-[ Sepolia Testnet (Ethereum 기반 블록체인) ]
+[ Sepolia Testnet (Ethereum 기반 블록체인) ]  
 
 ---
 
