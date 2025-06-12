@@ -18,14 +18,14 @@
 ## 🏗️ 기술 아키텍처
 
 
-[ User ]
-   ↓
-[ FastAPI 서버 ]
-   ↓
-[ 해시 처리 (SHA256 등) ]
-   ↓
-[ Web3.py → 스마트컨트랙트 ]
-   ↓
+[ User ]  
+   ↓  
+[ FastAPI 서버 ]  
+   ↓  
+[ 해시 처리 (SHA256 등) ]  
+   ↓  
+[ Web3.py → 스마트컨트랙트 ]  
+   ↓  
 [ Sepolia Testnet (Ethereum 기반 블록체인) ]  
 
 <br>
