@@ -55,21 +55,51 @@
 
 ---
 
-## 🧪 6월 12일 기준 테스트 결과
 
-- `/send` API를 2회 호출해 서로 다른 해시값 전송  
-- `/count` API 결과: `"count": 2` 정상 반환  
-- `/get/0`, `/get/1` API로 저장된 해시값 정확히 조회됨
+## ✅ 주요 기능 (6/13 기준)
+
+### 1. SHA256 해시 생성 API (`/hash`)
+- 사용자가 입력한 데이터를 SHA256 해시로 변환하여 반환
+
+### 2. 블록체인 전송 API (`/send`)
+- 해시값을 스마트컨트랙트에 기록하고 트랜잭션 해시 반환
+
+### 3. 트랜잭션 조회 API (`/tx/{index}`)
+- 인덱스를 통해 스마트컨트랙트에 저장된 트랜잭션 해시와 Etherscan URL 조회
+
+---
+
+## 🧪 실험 결과
+
+Swagger UI를 통해 다음 흐름으로 실험:
+1. `/hash`로 해시 생성
+2. `/send`로 스마트컨트랙트에 저장
+3. `/tx/0`, `/tx/1` 등으로 트랜잭션 해시 확인  
+✅ 실제로 Sepolia Etherscan 링크가 열리는 것까지 확인 완료
 
 ---
 
-## 📌 다음 목표
+## 🔜 향후 계획
 
-- `exists` API로 중복 해시 여부 확인 기능 추가
-- `msg.sender`, timestamp 저장 추가 (Solidity 개선)
-- 프론트엔드 연동 (React, Next.js 등) 고려
+- `/count` API 고도화 및 예외 처리 추가  
+- Swagger 문서 분류 정비 (tags/summary) 완료  
+- 프론트엔드 연결 또는 Etherscan 결과 뷰어 시각화 준비  
+- Github Actions 또는 Testnet 연동 자동화 탐색
 
 ---
+
+## 🔧 사용 기술 스택
+
+- Python 3.10  
+- FastAPI  
+- Web3.py  
+- MetaMask + Infura (Sepolia)  
+- Solidity + Remix IDE  
+- Swagger UI (자동 문서화)
+
+---
+
+📌 현재까지 모든 기능은 Sepolia 테스트넷 상에서 실시간 검증 완료되었습니다.
 
 ## 🙌 개발자
 
