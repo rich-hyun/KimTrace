@@ -93,3 +93,7 @@ def send_hash_to_blockchain(hash_str: str):
     tx_hash = w3.eth.send_raw_transaction(signed_txn.raw_transaction)
 
     return w3.to_hex(tx_hash)
+
+def get_transaction_hash_by_index(index: int) -> str:
+    tx_receipt = contract.functions.getHash(index).call()
+    return tx_receipt
